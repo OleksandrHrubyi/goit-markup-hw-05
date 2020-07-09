@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -56,7 +56,7 @@
       <section class="hero-section">
           <div>
           <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-          <a href="" class="button primery">Заказать услугу</a>
+          <button data-modal-open class="btn-open-modal" type="button">Заказать услугу</button>
         </div>
      </section>
 
@@ -506,11 +506,14 @@
         <div class="footer-list">
             
             <b class="footer-auth">Подпишитесь на рассылку</b>
-            <a class="button secondary" href=""><span class="footer-sign">Подписаться</span> 
-                <svg class="icon-send" width="24" height="24">
-                <use href="./img/sprite.svg#icon-send" ></use>
-            </svg></a>
-        
+            <form class="form-footer">
+                <input class="input-footer" type="email" name="mail" placeholder="E-mail">
+                <button class="button-footer" type="submit">Подписаться<svg class="icon-send" width="24" height="24">
+                    <use href="./img/sprite.svg#icon-send"></use>
+                </svg></button>
+            </form>
+            
+             
         </div>
     
     </div>
@@ -519,10 +522,62 @@
 
 </footer>
 
+<!-- Модальное окно -->
+ <div class="backdrop is-hidden" data-modal>
+     <form class="modal-form">
+         
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        
+        <p class="modal-box">
+            <input class="modal-input" type="text" name="feedback" id="name" placeholder=" ">
+            <label class="modal-label" for="name">Имя</label>
+            <svg class="icon-modal" width="18" height="18">
+                <use href="./img/sprite.svg#icon-person-black"></use>
+            </svg>
+        </p>
+        
+        <p class="modal-box">
+            <input class="modal-input" type="tel" name="feedback" id="tel" placeholder=" ">
+            <label class="modal-label" for="tel">Телефон</label>
+            <svg class="icon-modal" width="18" height="18">
+                <use href="./img/sprite.svg#icon-phone-black"></use>
+            </svg>
+        </p>
+        
+        <p class="modal-box">
+            <input class="modal-input" type="email" name="feedback" id="mail" placeholder=" ">
+            <label class="modal-label" for="mail">Почта</label>
+            <svg class="icon-modal" width="18" height="18">
+                <use href="./img/sprite.svg#icon-email-black"></use>
+            </svg>
+        </p>
+        
+        <p class="modal-box textarea-box">
+            <textarea class="modal-textarea" name="feedback" id="coments" placeholder="Коментарий"></textarea>
+            
+        </p>
+        
+        <p class="checkbox">
+            <label class="label-checkbox">
+                <input class="modal-checkbox" type="checkbox" name="feedback">
+                <span class="icon-checkbox"></span>Соглашаюсь с рассылкой и принимаю <a class="contract-link" href="">Условия договора</a>
+            </label>
+            
+        </p>
+        
+        <button class="modal-btn" type="submit">Отправить</button>
+        
+        <button class="modal-btn-close" data-modal-close>
+            
+            <svg class="icon-close" width="18" height="18">
+                <use href="./img/sprite.svg#icon-close-black"></use>
+            </svg>
+        </button>
 
- 
+    </form>
 
+</div>
 
-
+<script src="./js/modal.js"></script>
 </body>
 </html>  

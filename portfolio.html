@@ -49,11 +49,11 @@
       <div class="container">
          
          <ul class="portfolio-nav-list">
-            <li class="portfolio-nav-link"><button type="button">Веб-сайты</button></li>
-            <li class="portfolio-nav-link"><button type="button">Приложения</button></li>
-            <li class="portfolio-nav-link"><button type="button">Дизайн</button></li>
-            <li class="portfolio-nav-link"><button type="button">Маркетинг</button></li>
-            <li class="portfolio-nav-link"><button type="button">Все</button></li>
+            <li class="portfolio-nav-link"><button class="radio-btn" type="button">Веб-сайты</button></li>
+            <li class="portfolio-nav-link"><button class="radio-btn" type="button">Приложения</button></li>
+            <li class="portfolio-nav-link"><button class="radio-btn" type="button">Дизайн</button></li>
+            <li class="portfolio-nav-link"><button class="radio-btn" type="button">Маркетинг</button></li>
+            <li class="portfolio-nav-link"><button class="radio-btn" type="button">Все</button></li>
          </ul>
          
 
@@ -299,11 +299,14 @@
        <div class="footer-list">
            
            <b class="footer-auth">Подпишитесь на рассылку</b>
-           <a class="button secondary" href=""><span class="footer-sign">Подписаться</span> 
-               <svg class="icon-send" width="24" height="24">
-               <use href="./img/sprite.svg#icon-send" ></use>
-           </svg></a>
-       
+           <form class="form-footer">
+               <input class="input-footer" type="email" name="mail" id="mail" placeholder="E-mail">
+               <button class="button-footer" type="submit">Подписаться<svg class="icon-send" width="24" height="24">
+                   <use href="./img/sprite.svg#icon-send"></use>
+               </svg></button>
+           </form>
+           
+            
        </div>
    
    </div>
@@ -311,8 +314,6 @@
    <p class="footer-developer">2020 | Developed by GoIT Students</p>
 
 </footer>
-
-
 
 </body>
 </html>  
